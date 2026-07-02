@@ -4,11 +4,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
-const mongoose_1 = __importDefault(require("mongoose"));
 const models_1 = require("./models");
+const database_1 = require("./database");
 const app = (0, express_1.default)();
 const PORT = Number(process.env.PORT) || 8000;
-const MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/octofit_db';
 const codespaceName = process.env.CODESPACE_NAME;
 const API_BASE_URL = codespaceName
     ? `https://${codespaceName}-8000.app.github.dev`
@@ -63,8 +62,7 @@ app.post('/api/workouts/', async (req, res) => {
 });
 const startServer = async () => {
     try {
-        await mongoose_1.default.connect(MONGO_URI);
-        console.log('Connected to MongoDB');
+        await (0, database_1.connectDatabase)();
         app.listen(PORT, () => {
             console.log(`Server listening on port ${PORT}`);
             console.log(`API base URL: ${API_BASE_URL}`);
