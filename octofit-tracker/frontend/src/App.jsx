@@ -1,5 +1,6 @@
 import { NavLink, Route, Routes } from 'react-router-dom';
 import './App.css';
+import { getApiBaseUrl } from './api';
 import Activities from './components/Activities';
 import Leaderboard from './components/Leaderboard';
 import Teams from './components/Teams';
@@ -7,9 +8,7 @@ import Users from './components/Users';
 import Workouts from './components/Workouts';
 
 function App() {
-  const apiHint = import.meta.env.VITE_CODESPACE_NAME
-    ? `https://${import.meta.env.VITE_CODESPACE_NAME}-8000.app.github.dev/api`
-    : 'http://localhost:8000/api';
+  const apiHint = `${getApiBaseUrl()}`;
 
   return (
     <main className="container py-4 py-lg-5">
