@@ -14,7 +14,7 @@ function Teams() {
       setError('');
 
       try {
-        const response = await fetch(`${getApiBaseUrl()}/teams/`);
+        const response = await fetch(`${getApiBaseUrl()}api/teams/`);
         if (!response.ok) {
           throw new Error('Unable to load teams.');
         }
