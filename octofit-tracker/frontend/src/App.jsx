@@ -8,8 +8,8 @@ import Workouts from './components/Workouts';
 
 function App() {
   const apiHint = import.meta.env.VITE_CODESPACE_NAME
-    ? `https://${import.meta.env.VITE_CODESPACE_NAME}-8000.app.github.dev/`
-    : 'http://localhost:8000/';
+    ? `https://${import.meta.env.VITE_CODESPACE_NAME}-8000.app.github.dev`
+    : 'http://localhost:8000';
 
   return (
     <main className="container py-4 py-lg-5">
