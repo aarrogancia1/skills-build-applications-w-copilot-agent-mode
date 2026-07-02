@@ -14,7 +14,7 @@ function Users() {
       setError('');
 
       try {
-        const response = await fetch(`${getApiBaseUrl()}/users/`);
+        const response = await fetch(`${getApiBaseUrl()}/api/users/`);
         if (!response.ok) {
           throw new Error('Unable to load users.');
         }
