@@ -14,7 +14,7 @@ function Activities() {
       setError('');
 
       try {
-        const response = await fetch(`${getApiBaseUrl()}activities/`);
+        const response = await fetch(`${getApiBaseUrl()}/api/activities/`);
         if (!response.ok) {
           throw new Error('Unable to load activities.');
         }
