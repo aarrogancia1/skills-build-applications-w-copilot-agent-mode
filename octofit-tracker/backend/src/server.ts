@@ -19,6 +19,7 @@ app.get('/api/health', (_req, res) => {
   });
 });
 
+
 app.get('/api/users/', async (_req, res) => {
   const users = await User.find({}).lean();
   res.json(users);
