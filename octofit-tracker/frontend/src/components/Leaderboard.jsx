@@ -14,7 +14,7 @@ function Leaderboard() {
       setError('');
 
       try {
-        const response = await fetch(`${getApiBaseUrl()}/leaderboard/`);
+        const response = await fetch(`${getApiBaseUrl()}leaderboard/`);
         if (!response.ok) {
           throw new Error('Unable to load leaderboard.');
         }

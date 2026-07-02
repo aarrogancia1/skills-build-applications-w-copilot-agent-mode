@@ -14,7 +14,7 @@ function Workouts() {
       setError('');
 
       try {
-        const response = await fetch(`${getApiBaseUrl()}/workouts/`);
+        const response = await fetch(`${getApiBaseUrl()}workouts/`);
         if (!response.ok) {
           throw new Error('Unable to load workouts.');
         }
