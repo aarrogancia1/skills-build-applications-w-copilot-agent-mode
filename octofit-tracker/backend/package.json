@@ -1,0 +1,20 @@
+{
+  "name": "octofit-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "dev": "nodemon --exec ts-node src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.1.0",
+    "express": "^5.2.1",
+    "mongoose": "^9.7.3",
+    "nodemon": "^3.1.14",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  }
+}
